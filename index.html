@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>MyCafe</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+  <!--incosolad,--"Tangerine", ;---,Sofia-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="img/x-icon" href="../img/armflagfavicon.png">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <script src="https://unpkg.com/feather-icons"></script>
+
+
+  <script>
+    /*
+    $(document).ready(function () {
+      $("button").click(function () {
+        $("#div1").fadeOut().fadeIn(3000);
+        $("#div2").fadeOut("slow");
+        $("#div3").fadeOut(3000);
+        $("div1").animate({ left: '250px' });
+      });
+    });
+    $(document).ready(function () {
+      $("button").click(function () {
+        $("#p1").css("color", "red").slideUp(2000).slideDown(2000);
+        $("p").css("background-color", "yellow");
+        $("p").css({ "background-color": "yellow", "font-size": "200%" });
+      });
+    });*/
+    //-----------
+    $(document).ready(function () {
+      $("#div1").mouseenter(function () {
+        $("this").animate({
+          right: '250px',
+          opacity: '0.5',
+          height: '150px',
+          width: '150px'
+        });
+      });
+    });
+
+    //-----------------
+    $(document).ready(function () {
+      $("#div1").mouseenter(function () {
+        $("this").animate({ left: '250px' });
+        // alert("HELLO OLINKA");
+        //$(this).css("color", "green");
+        //$("#div1").css({color: "red"});
+        $("#div1").fadeOut(2000).fadeIn(5000);
+        $("#div1").animate({ left: '150px', opasity: '0.2' });
+        $("#div1").animate({ fontSize: '3em' }, 5000);//"slow"obektn heta tanum
+        //$("#div1").stop();
+        //$("#div1").show();
+        //$("#div1").animate({ right: '250px', opasity: '0.2' });
+        $("#div1 ").slideUp('slow').slideDown('slow');//3000
+        $("#div1").animate({ fontSize: '150px' }, "slow");
+        $("#div1").animate({ fontSize: '100px' }, "slow");
+        
+
+        //$("#div1").hide(3000).show(5000);
+        //$("#div1").stop(true);
+        //$("#div1").finish();
+        //$(this).css("color", "green");
+
+      });
+    });
+    //-----------
+
+    //------------------------
+    $(document).ready(function () {
+      $("input").focus(function () {
+        $(this).css("background-color", "yellow");
+      });
+      $("input").blur(function () {
+        $(this).css("background-color", "green");
+      });
+    });
+    $(document).ready(function () {
+      $("h6").mouseenter(function () {
+        //  $("h5").css("background-color", "blue");
+        $("h6").slideUp(1000).slideDown(5000);
+        $("h6").addClass("blue");
+        $("h6").addClass("important");
+        $("h6").nextAll().css({ "color": "red", "border": "1px solid red" });
+        //$("h5").first().css("background-color", "yellow");
+        //$("h6").fadeOut(3000).css("background-color", "cyan").text("BEAUTIFUL CAFE").show(5000);
+        $("h6").animate({ fontSize: '80px' }, "slow");
+        //$("p").eq(1).css("background-color", "yellow");
+
+        // $("#div1").append("Hello Olga");
+        // $("h5").text("hello");
+      });
+
+    });
+  </script>
+
+  <style>
+    .w3-tangerine {
+      /* font-family: Sofia, serif; */
+      font-family: "Tangerine", serif;
+    }
+
+    /*
+    .important {
+      font-weight: bold;
+      font-size: xx-large;
+    }
+
+    .blue {
+      color: dodgerblue;
+    }*/
+
+    body,
+    html {
+      height: 100%;
+      font-family: "Inconsolata", sans-serif;
+    }
+
+    .bgimg {
+      background-position: center;
+      background-size: cover;
+      background-image: url("../img/coffeehouse.avif");
+      min-height: 75%;
+    }
+
+    .menu {
+      display: none;
+    }
+
+    /* icon */
+
+    .icons {
+      display: flex;
+      gap: 40px;
+    }
+
+    .icons a {
+      text-decoration: none;
+    }
+
+    .icons a svg {
+      fill: #d0ecf7;
+      transform: scale(1.5);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Links (sit on top) -->
+  <div class="w3-top">
+    <div class="w3-row w3-padding w3-black">
+      <div class="w3-col s3">
+        <a href="#" class="w3-button w3-block w3-black">HOME</a>
+      </div>
+      <div class="w3-col s3">
+        <a href="#about" class="w3-button w3-block w3-black">ABOUT</a>
+      </div>
+      <div class="w3-col s3">
+        <a href="#menu" class="w3-button w3-block w3-black">MENU</a>
+      </div>
+      <div class="w3-col s3">
+        <a href="#where" class="w3-button w3-block w3-black">WHERE</a>
+      </div>
+    </div>
+  </div>
+  <!-- anim -->
+
+  <!-- Header with image -->
+  <header class="bgimg w3-display-container w3-grayscale-min" id="home">
+    <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+      <span class="w3-tag">Open from 6am to 5pm</span>
+    </div>
+    <div class="w3-display-middle w3-center">
+      <span class="w3-text-green w3-tangerine w3-animate-zoom" style="font-size:90px" id="div1">Cafe<br>Olinka</span>
+    </div>
+    <div class="w3-display-bottomright w3-center w3-padding-large">
+      <span class="w3-text-white">15 Adr street, 5015</span>
+    </div>
+  </header>
+
+  <!-- Add a background color and large text to the whole page -->
+  <div class="w3-sand w3-grayscale w3-large">
+
+    <!-- About Container -->
+    <div class="w3-container" id="about">
+      <div class="w3-content" style="max-width:700px">
+        <h6 class="w3-center w3-padding-64 w3-animate-right"><span class="w3-text-cyan">ABOUT THE CAFE</span></h6>
+        <!--w3-text-green w3-tag-->
+        <!-- <button class="w3-text-green w3-round-xxlarge w3-hover-sepia">Music</button> -->
+        <a href="../audio/Pochil.mp4" class="w3-round-xxlarge w3-text-red w3-hover-blue w3-border">Pochil</a><br>
+        <!--<a href="https://youtu.be/x2dasaon7C4?si=DrdJSHMWDuIcV3RN" class="w3-text-red w3-hover-blue">Mek Mek</a><br>
+        <a href="../audio/Storm - Vanessa Mae to 432 Hz (1).mp4">VideoStorm</a>
+        <a href="../audio/Kaputacher.webm">Video.KaputAcher</a><br>
+        <a href="../audio/adumikyan.webm">VideoArkadiDumikyan</a><br>
+        <a href="#"></a>
+        <a href="../audio/Аркадий Думикян-Te Achers Qez Voronen.mp3">Te Acers Qez voronen</a><br>
+        <a href="../audio/Аркадий Думикян, Armstrong-Run Baby Run.mp3">Run baby</a><br />
+        <a href="../audio/Аркадий Думикян, Arik Dumikyan-Брат.mp3">Brat</a><br>-->
+        <a href="../audio/tones_and_i_-_dance_monkey_muzati.net.mp3">Manki</a>
+        <p>The Cafe was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+          do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>In addition to our full espresso and brew bar menu, we serve fresh made-to-order breakfast and lunch
+          sandwiches, as well as a selection of sides and salads and other good stuff.</p>
+        <div class="w3-panel w3-leftbar w3-light-grey">
+          <p><i>"Use products from nature for what it's worth - but never too early, nor too late." Fresh is the new
+              sweet.</i></p>
+          <p>Chef, Coffeeist and Owner: Liam Brown</p>
+        </div>
+        <img src="../img/coffeeshop.jpg" style="width:100%;max-width:1000px" class="w3-margin-top">
+        <p><strong>Opening hours:</strong> everyday from 6am to 5pm.</p>
+        <p><strong>Address:</strong> 15 Adr street, 5015, NY</p>
+      </div>
+    </div>
+
+    <!-- Menu Container -->
+    <div class="w3-container" id="menu">
+      <div class="w3-content" style="max-width:700px">
+
+        <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">THE MENU</span></h5>
+
+        <div class="w3-row w3-center w3-card w3-padding">
+          <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
+            <div class="w3-col s6 tablink">Eat</div>
+          </a>
+          <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+            <div class="w3-col s6 tablink">Drink</div>
+          </a>
+        </div>
+
+        <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
+          <h5>Bread Basket</h5>
+          <p class="w3-text-grey">Assortment of fresh baked fruit breads and muffins 5.50</p><br>
+
+          <h5>Honey Almond Granola with Fruits</h5>
+          <p class="w3-text-grey">Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</p><br>
+
+          <h5>Belgian Waffle</h5>
+          <p class="w3-text-grey">Vanilla flavored batter with malted flour 7.50</p><br>
+
+          <h5>Scrambled eggs</h5>
+          <p class="w3-text-grey">Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</p><br>
+
+          <h5>Blueberry Pancakes</h5>
+          <p class="w3-text-grey">With syrup, butter and lots of berries 8.50</p>
+        </div>
+
+        <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
+          <h5>Coffee</h5>
+          <p class="w3-text-grey">Regular coffee 2.50</p><br>
+
+          <h5>Chocolato</h5>
+          <p class="w3-text-grey">Chocolate espresso with milk 4.50</p><br>
+
+          <h5>Corretto</h5>
+          <p class="w3-text-grey">Whiskey and coffee 5.00</p><br>
+
+          <h5>Iced tea</h5>
+          <p class="w3-text-grey">Hot tea, except not hot 3.00</p><br>
+
+          <h5>Soda</h5>
+          <p class="w3-text-grey">Coke, Sprite, Fanta, etc. 2.50</p>
+        </div>
+        <img src="../img/coffeehouse2.jpg" style="width:100%;max-width:1000px;margin-top:32px;">
+      </div>
+    </div>
+
+    <!-- Contact/Area Container -->
+    <div class="w3-container" id="where" style="padding-bottom:32px;">
+      <div class="w3-content" style="max-width:700px">
+        <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">WHERE TO FIND US</span></h5>
+        <p>Find us at some address at some place.</p>
+        <img src="../img/map.jpg" class="w3-img" style="width:100%">
+        <p><span class="w3-tag">FYI!</span> We offer full-service catering for any event, large or small. We understand
+          your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste.</p>
+        <p><strong>Reserve</strong> a table, ask for today's special or just send us a message:</p>
+        <form action="/action_page.php" target="_blank">
+          <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+          <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="How many people" required
+              name="People"></p>
+          <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Date and time" required
+              name="date" value="2020-11-16T20:00"></p>
+          <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message \ Special requirements"
+              required name="Message"></p>
+          <p><button class="w3-button w3-black" type="submit">SEND MESSAGE</button></p>
+        </form>
+      </div>
+    </div>
+
+
+  </div>
+  <!-- End page content -->
+  <!--icon  -->
+  <div class="icons w3-padding">
+    <a href="https://m.facebook.com" target="_blank">
+
+      <i data-feather="facebook"></i>
+    </a>
+    <a href="https://www.instagram.com" target="_blank">
+      <i data-feather="instagram"></i>
+    </a>
+
+    <a href="https://misaksaghoyan.github.io/Magazin" target="_blank">
+      <i data-feather="linkedin"></i>
+    </a>
+    <a href="#" target="_blank">
+      <i data-feather="twitter"></i>
+    </a>
+    <a href="https://m.youtube.com" target="_blank">
+      <i data-feather="youtube"></i>
+    </a>
+
+    <a href="https://www.Telegram.com" target="_blank">
+      <i data-feather="send"></i>
+    </a>
+
+
+
+
+  </div>
+
+  <!--
+  <footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank"
+        class="w3-hover-text-green">w3.css</a></p>
+  </footer>
+Footer -->
+  <script>
+    // Tabbed Menu
+    function openMenu(evt, menuName) {
+      var i, x, tablinks;
+      x = document.getElementsByClassName("menu");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < x.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+      }
+      document.getElementById(menuName).style.display = "block";
+      evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+    }
+    document.getElementById("myLink").click();
+  </script>
+
+
+
+
+  <script>
+    feather.replace()
+  </script>
+
+</body>
+
+</html>
